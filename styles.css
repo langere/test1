@@ -1,0 +1,58 @@
+/* 容器样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 包裹大图片和按钮的容器 */
+.image-container {
+    position: relative; /* 使子元素定位相对于这个容器 */
+}
+
+/* 大图片的样式 */
+#mainImage {
+    width: 500px; /* 固定大图片的宽度 */
+    height: 400px; /* 固定大图片的高度 */
+    object-fit: cover; /* 保持图片比例，并使图片填满容器 */
+    margin-bottom: 20px;
+    transition: filter 0.3s; /* 为变暗效果添加过渡效果 */
+}
+
+/* 变暗按钮的样式 */
+#darkenButton {
+    position: absolute; /* 绝对定位按钮 */
+    top: 10px; /* 距离顶部 10px */
+    left: 10px; /* 距离左侧 10px */
+    padding: 10px 20px; /* 按钮的内边距 */
+    background-color: rgba(0, 0, 0, 0.6); /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉按钮边框 */
+    border-radius: 5px; /* 按钮圆角 */
+    cursor: pointer; /* 鼠标悬停时显示手形图标 */
+    z-index: 1; /* 确保按钮位于图片之上 */
+}
+
+#darkenButton:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* 鼠标悬停时按钮背景颜色变深 */
+}
+
+/* 小图片的样式 */
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap; /* 允许小图片换行 */
+    justify-content: center; /* 水平居中小图片 */
+    gap: 10px; /* 小图片之间的间距 */
+}
+
+.thumbnail {
+    width: 10%; /* 将小图片宽度设置为容器宽度的 10% */
+    height: auto; /* 保持图片比例 */
+    cursor: pointer; /* 鼠标悬停时显示手形图标 */
+    border: 2px solid transparent; /* 为小图片设置透明边框 */
+    transition: border-color 0.3s; /* 添加过渡效果 */
+}
+
+.thumbnail:hover {
+    border-color: #007bff; /* 鼠标悬停时边框颜色变化 */
+}
